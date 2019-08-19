@@ -442,7 +442,7 @@
     read_basin_mask = .false.
 /
 &ocean_tracer_diag_nml
-    diag_step = 1
+    diag_step = 4320
     do_bitwise_exact_sum = .false.
     tracer_conserve_days = 30.0
 /
