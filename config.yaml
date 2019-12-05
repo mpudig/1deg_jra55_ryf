@@ -1,7 +1,7 @@
 # PBS configuration
 queue: expressbw
 project: e14
-walltime: 1:00:00
+walltime: 5:00:00
 jobname: 1deg_jra55_ryf
 ncpus: 252
 mem: 500GB
@@ -10,7 +10,9 @@ shortpath: /short/e14
 # Model configuration
 name: common
 model: access-om2
-input: /short/public/access-om2/input_236a3011/common_1deg_jra55
+input:
+    - /short/e14/rmh561/access-om2/input/fatITF
+    - /short/public/access-om2/input_236a3011/common_1deg_jra55
 submodels:
     - name: atmosphere
       model: yatm
