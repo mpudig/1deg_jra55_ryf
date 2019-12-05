@@ -12,7 +12,9 @@ ACCESS-OM2
 "ocean",            12,  "months", 1, "days", "time",
 "ocean_grid",      -1,  "months", 1, "days", "time",
 "ocean_scalar",     1,  "months", 1, "days", "time",
-
+"ocean_heat",       12,  "months", 1, "days", "time",
+"ocean_snap",       12,  "months", 1, "days", "time",
+"ocean_wmass",      12,  "months", 1, "days", "time",
 
 # Save ocean grid data once and for all
 "ocean_model","geolon_t","geolon_t", "ocean_grid","all",.false.,"none",2
@@ -43,10 +45,10 @@ ACCESS-OM2
 "ocean_model","dzt","dzt",              "ocean","all",.true.,"none",2
 "ocean_model","pot_rho_0","pot_rho_0",  "ocean","all",.true.,"none",2
 #"ocean_model","pot_rho_2","pot_rho_2",  "ocean","all",.true.,"none",2
-"ocean_model","tx_trans","tx_trans",    "ocean","all",.true.,"none",2
-"ocean_model","ty_trans","ty_trans",    "ocean","all",.true.,"none",2
-"ocean_model","ty_trans_gm","ty_trans_gm",    "ocean","all",.true.,"none",2
-"ocean_model","tx_trans_rho","tx_trans_rho","ocean","all",.true.,"none",2
+#"ocean_model","tx_trans","tx_trans",    "ocean","all",.true.,"none",2
+#"ocean_model","ty_trans","ty_trans",    "ocean","all",.true.,"none",2
+#"ocean_model","ty_trans_gm","ty_trans_gm",    "ocean","all",.true.,"none",2
+#"ocean_model","tx_trans_rho","tx_trans_rho","ocean","all",.true.,"none",2
 "ocean_model","ty_trans_rho","ty_trans_rho","ocean","all",.true.,"none",2
 "ocean_model","ty_trans_rho_gm","ty_trans_rho_gm","ocean","all",.true.,"none",2
 #"ocean_model","temp_xflux_adv","temp_xflux_adv","ocean","all",.true.,"none",2
@@ -56,7 +58,7 @@ ACCESS-OM2
 
 # 2d fields - monthly output
 "ocean_model","sea_level","sea_level",             "ocean","all",.true.,"none",2
-"ocean_model","eta_t","eta_t",                     "ocean","all",.true.,"none",2
+#"ocean_model","eta_t","eta_t",                     "ocean","all",.true.,"none",2
 "ocean_model","sea_level_sq","sea_levelsq",        "ocean","all",.true.,"none",2
 "ocean_model","mld","mld",                         "ocean","all",.true.,"none",2
 #"ocean_model","pme_river","pme_river",             "ocean","all",.true.,"none",2
