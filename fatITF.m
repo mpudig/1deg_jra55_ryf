@@ -1,6 +1,14 @@
 
 % alter topography and mask files to widen ITF in ACCESS-OM2
 % 1-degree run.
+%
+% Note: For the mask and kmt it's better to use topogtools from
+% github like:
+%
+% clone COSIMA/topogtools.git
+%
+% Run ./topog2mask.py topog.nc kmt.nc ocean_mask.nc
+%
 
 base_in = '/short/public/access-om2/input_236a3011/';
 base_out = '/short/e14/rmh561/access-om2/input/fatITF/';
@@ -9,14 +17,17 @@ fmask_in = [base_in 'mom_1deg/ocean_mask.nc'];
 fkmt_in = [base_in 'cice_1deg/kmt.nc'];
 ftopo_in = [base_in 'mom_1deg/topog.nc'];
 fssw_in = [base_in 'mom_1deg/ssw_atten_depth.nc'];
+fchl_in = [base_in 'mom_1deg/chl.nc'];
 mask  = ncread(fmask_in,'mask');
 depth = ncread(ftopo_in,'depth');
 kmt  = ncread(fkmt_in,'kmt');
 ssw = ncread(fssw_in,'ssw_atten_depth');
+chl = ncread(fchl_in,'chl');
 
 fmask_out = [base_out 'mom_1deg/ocean_mask.nc'];
 ftopo_out = [base_out 'mom_1deg/topog.nc'];
 fssw_out = [base_out 'mom_1deg/ssw_atten_depth.nc'];
+fchl_out = [base_out 'mom_1deg/chl.nc'];
 fkmt_out = [base_out 'cice_1deg/kmt.nc'];
 
 mask_out = mask;
@@ -100,15 +111,23 @@ ncwrite(fkmt_out,'kmt',mask_out);
 copyfile(ftopo_in,ftopo_out);
 ncwrite(ftopo_out,'depth',depth_out);
 
-% ssw:
+% ssw and chl:
 ssw(abs(ssw)>1000) = NaN;
+chl(chl==0) = NaN;
 ssw_out = ssw;
+chl_out = chl;
 for i=1:length(ssw(1,1,:))
     ssw_in = ssw(:,:,i);
     ssw_mean = nanmean(ssw_in(reg));
     tmp = ssw_in;
     tmp(isnan(tmp)) = ssw_mean;
     ssw_out(:,:,i) = tmp;
+
+    chl_in = chl(:,:,i);
+    chl_mean = nanmean(chl_in(reg));
+    tmp = chl_in;
+    tmp(isnan(tmp)) = chl_mean;
+    chl_out(:,:,i) = tmp;
 end
 
 subplot(2,2,4);
@@ -124,6 +143,8 @@ plot([regi(1) regi(2) regi(2) regi(1) regi(1)],[regi(3) regi(3) regi(4) regi(4) 
 
 copyfile(fssw_in,fssw_out);
 ncwrite(fssw_out,'ssw_atten_depth',ssw_out);
+copyfile(fchl_in,fchl_out);
+ncwrite(fchl_out,'chl',chl_out);
 
 
 
