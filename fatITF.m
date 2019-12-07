@@ -12,32 +12,21 @@
 
 base_in = '/short/public/access-om2/input_236a3011/';
 base_out = '/short/e14/rmh561/access-om2/input/fatITF/';
+base_in = 'in/';
+base_out = './';
 
-fmask_in = [base_in 'mom_1deg/ocean_mask.nc'];
-fkmt_in = [base_in 'cice_1deg/kmt.nc'];
 ftopo_in = [base_in 'mom_1deg/topog.nc'];
-fssw_in = [base_in 'mom_1deg/ssw_atten_depth.nc'];
-fchl_in = [base_in 'mom_1deg/chl.nc'];
-mask  = ncread(fmask_in,'mask');
+fmask_in = [base_in 'mom_1deg/ocean_mask.nc'];
 depth = ncread(ftopo_in,'depth');
-kmt  = ncread(fkmt_in,'kmt');
-ssw = ncread(fssw_in,'ssw_atten_depth');
-chl = ncread(fchl_in,'chl');
-
-fmask_out = [base_out 'mom_1deg/ocean_mask.nc'];
+mask = ncread(fmask_in,'mask');
 ftopo_out = [base_out 'mom_1deg/topog.nc'];
-fssw_out = [base_out 'mom_1deg/ssw_atten_depth.nc'];
-fchl_out = [base_out 'mom_1deg/chl.nc'];
-fkmt_out = [base_out 'cice_1deg/kmt.nc'];
-
-mask_out = mask;
 depth_out = depth;
 
 [xL,yL] = size(depth);
 
 subplot(2,2,1);
 depth_plot = depth;
-depth_plot(~mask) = NaN;
+%depth_plot(~mask) = NaN;
 pcolor(depth_plot');
 shading flat;
 xlim([15 90]);
@@ -47,23 +36,17 @@ caxis([0 2000]);
 hold on;
 
 [X,Y] = ndgrid(1:xL,1:yL);
-regi = [34 55 104 160];
+regi = [40 52 104 155];
 reg = X>=regi(1) & X<=regi(2) & Y>=regi(3) & Y<=regi(4);
 
 plot([regi(1) regi(2) regi(2) regi(1) regi(1)],[regi(3) regi(3) regi(4) regi(4) regi(3)],'-k');
 
-
-mask_filt = (mask((regi(1):regi(2))+1,regi(3):regi(4)) + ...
-                                              mask((regi(1):regi(2)),regi(3):regi(4)) + ...
-                                              mask((regi(1):regi(2))-1,regi(3):regi(4)) + ...
-                                              mask((regi(1):regi(2)),(regi(3):regi(4))+1) + ...
-                                              mask((regi(1):regi(2)),(regi(3):regi(4))-1))/5;
-mask_filt(mask_filt>0) = 1;
-mask_out(regi(1):regi(2),regi(3):regi(4)) = mask_filt;
-
 dp_int = 250;
+depths = depth_out(reg);
+depths(depths<1000) = min(depths(depths<1000)+dp_int,1000);
+
 depth_temp = depth_out;
-depth_temp(regi(1):regi(2),regi(3):regi(4)) = depth_temp(regi(1):regi(2),regi(3):regi(4))+dp_int;
+depth_temp(reg) = depths;
 
 % Smooth twice:
 depth_temp((regi(1)-5:regi(2)+5),regi(3)-5:regi(4)+5) = (depth_temp((regi(1)-5:regi(2)+5)+1,regi(3)-5:regi(4)+5) + ...
@@ -82,7 +65,7 @@ depth_out(regi(1):regi(2),regi(3):regi(4)) = depth_temp(regi(1):regi(2),regi(3):
 
 subplot(2,2,2);
 depth_plot = depth_out;
-depth_plot(~mask_out) = NaN;
+%depth_plot(~mask_out) = NaN;
 pcolor(depth_plot');
 shading flat;
 xlim([15 90]);
@@ -94,7 +77,7 @@ plot([regi(1) regi(2) regi(2) regi(1) regi(1)],[regi(3) regi(3) regi(4) regi(4) 
 
 subplot(2,2,3);
 depth_plot = depth_out-depth;
-depth_plot(~mask_out) = NaN;
+%depth_plot(~mask_out) = NaN;
 pcolor(depth_plot');
 shading flat;
 xlim([15 90]);
@@ -104,14 +87,17 @@ caxis([-500 500]);
 hold on;
 plot([regi(1) regi(2) regi(2) regi(1) regi(1)],[regi(3) regi(3) regi(4) regi(4) regi(3)],'-k');
 
-copyfile(fmask_in,fmask_out);
-ncwrite(fmask_out,'mask',mask_out);
-copyfile(fkmt_in,fkmt_out);
-ncwrite(fkmt_out,'kmt',mask_out);
 copyfile(ftopo_in,ftopo_out);
 ncwrite(ftopo_out,'depth',depth_out);
 
 % ssw and chl:
+fssw_in = [base_in 'mom_1deg/ssw_atten_depth.nc'];
+fchl_in = [base_in 'mom_1deg/chl.nc'];
+ssw = ncread(fssw_in,'ssw_atten_depth');
+chl = ncread(fchl_in,'chl');
+fssw_out = [base_out 'mom_1deg/ssw_atten_depth.nc'];
+fchl_out = [base_out 'mom_1deg/chl.nc'];
+
 ssw(abs(ssw)>1000) = NaN;
 chl(chl==0) = NaN;
 ssw_out = ssw;
