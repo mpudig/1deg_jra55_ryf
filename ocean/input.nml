@@ -43,7 +43,7 @@
     neutral = .true.
 /
 &mpp_io_nml
-    deflate_level = 5
+    deflate_level = -1
     shuffle = 1
 /
 &ocean_adv_vel_diag_nml
@@ -130,8 +130,8 @@
     eos_linear = .false.
     eos_preteos10 = .true.
     layer_nk = 80
-    neutralrho_max = 1030.0
-    neutralrho_min = 1020.0
+    neutralrho_min = 1028.0
+    neutralrho_max = 1038.0
     potrho_max = 1038.0
     potrho_min = 1028.0
 /
@@ -363,7 +363,7 @@
     optics_morel_antoine = .false.
     read_chl = .true.
     use_this_module = .true.
-    zmax_pen = 300.0
+    zmax_pen = 1.0e6
 /
 &ocean_shortwave_jerlov_nml
     use_this_module = .false.
