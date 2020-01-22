@@ -10,6 +10,7 @@ ACCESS-OM2
 # output files
 "ocean_month",      1,  "months", 1, "days", "time",
 "ocean",           12,  "months", 1, "days", "time",
+"ocean_wmass",     12,  "months", 1, "days", "time",
 "ocean_grid",      -1,  "months", 1, "days", "time",
 "ocean_scalar",     1,  "months", 1, "days", "time",
 
@@ -40,19 +41,40 @@ ACCESS-OM2
 "ocean_model","u","u",                  "ocean","all",.true.,"none",2
 "ocean_model","v","v",                  "ocean","all",.true.,"none",2
 "ocean_model","wt","wt",                "ocean","all",.true.,"none",2
-#"ocean_model","dzt","dzt",              "ocean","all",.true.,"none",2
+"ocean_model","dzt","dzt",              "ocean","all",.true.,"none",2
 "ocean_model","pot_rho_0","pot_rho_0",  "ocean","all",.true.,"none",2
 #"ocean_model","pot_rho_2","pot_rho_2",  "ocean","all",.true.,"none",2
-#"ocean_model","tx_trans","tx_trans",    "ocean","all",.true.,"none",2
-#"ocean_model","ty_trans","ty_trans",    "ocean","all",.true.,"none",2
-#"ocean_model","ty_trans_gm","ty_trans_gm",    "ocean","all",.true.,"none",2
+"ocean_model","tx_trans","tx_trans",    "ocean","all",.true.,"none",2
+"ocean_model","ty_trans","ty_trans",    "ocean","all",.true.,"none",2
+"ocean_model","tx_trans_gm","tx_trans_gm",    "ocean","all",.true.,"none",2
+"ocean_model","ty_trans_gm","ty_trans_gm",    "ocean","all",.true.,"none",2
 #"ocean_model","tx_trans_rho","tx_trans_rho","ocean","all",.true.,"none",2
-"ocean_model","ty_trans_rho","ty_trans_rho","ocean","all",.true.,"none",2
-"ocean_model","ty_trans_rho_gm","ty_trans_rho_gm","ocean","all",.true.,"none",2
+#"ocean_model","ty_trans_rho","ty_trans_rho","ocean","all",.true.,"none",2
+#"ocean_model","ty_trans_rho_gm","ty_trans_rho_gm","ocean","all",.true.,"none",2
 #"ocean_model","temp_xflux_adv","temp_xflux_adv","ocean","all",.true.,"none",2
 #"ocean_model","temp_yflux_adv","temp_yflux_adv","ocean","all",.true.,"none",2
 #"ocean_model","diff_cbt_t","diff_cbt_t",    "ocean","all",.true.,"none",2
 
+# Temperature-binned transports
+"ocean_model","tx_trans_nrho","tx_trans_nrho", "ocean_wmass","all",.true.,"none",2
+"ocean_model","ty_trans_nrho","ty_trans_nrho", "ocean_wmass","all",.true.,"none",2
+"ocean_model","tx_trans_nrho_gm","tx_trans_nrho_gm", "ocean_wmass","all",.true.,"none",2
+"ocean_model","ty_trans_nrho_gm","ty_trans_nrho_gm", "ocean_wmass","all",.true.,"none",2
+"ocean_model","tx_trans_nrho_submeso","tx_trans_nrho_submeso", "ocean_wmass","all",.true.,"none",2
+"ocean_model","ty_trans_nrho_submeso","ty_trans_nrho_submeso", "ocean_wmass","all",.true.,"none",2
+
+# Temperature-binned heat transports:
+"ocean_model","temp_xflux_adv_on_nrho","temp_xflux_adv_on_nrho", "ocean_wmass","all",.true.,"none",2
+"ocean_model","temp_yflux_adv_on_nrho","temp_yflux_adv_on_nrho", "ocean_wmass","all",.true.,"none",2
+"ocean_model","temp_xflux_submeso_on_nrho","temp_xflux_submeso_on_nrho", "ocean_wmass","all",.true.,"none",2
+"ocean_model","temp_yflux_submeso_on_nrho","temp_yflux_submeso_on_nrho", "ocean_wmass","all",.true.,"none",2
+"ocean_model","temp_xflux_gm_on_nrho","temp_xflux_gm_on_nrho", "ocean_wmass","all",.true.,"none",2
+"ocean_model","temp_yflux_gm_on_nrho","temp_yflux_gm_on_nrho", "ocean_wmass","all",.true.,"none",2
+"ocean_model","temp_xflux_ndiffuse_on_nrho","temp_xflux_ndiffuse_on_nrho", "ocean_wmass","all",.true.,"none",2
+"ocean_model","temp_yflux_ndiffuse_on_nrho","temp_yflux_ndiffuse_on_nrho", "ocean_wmass","all",.true.,"none",2
+
+# To close volume budget, also need P-E+R T-binned:
+"ocean_model","mass_pmepr_on_nrho","mass_pmepr_on_nrho","ocean_wmass","all",.true.,"none",2
 
 # 2d fields - monthly output
 "ocean_model","sea_level","sea_level",             "ocean_month","all",.true.,"none",2
