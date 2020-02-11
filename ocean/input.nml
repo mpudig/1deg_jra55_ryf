@@ -129,6 +129,7 @@
 &ocean_density_nml
     neutral_density_theta = .true.
     neutral_density_potrho = .false.
+    nrho_face_bin = .true.
     eos_linear = .false.
     eos_preteos10 = .true.
     layer_nk = 74
