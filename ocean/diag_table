@@ -48,12 +48,20 @@ ACCESS-OM2
 "ocean_model","ty_trans","ty_trans",    "ocean","all",.true.,"none",2
 "ocean_model","tx_trans_gm","tx_trans_gm",    "ocean","all",.true.,"none",2
 "ocean_model","ty_trans_gm","ty_trans_gm",    "ocean","all",.true.,"none",2
+"ocean_model","tx_trans_submeso","tx_trans_submeso",    "ocean","all",.true.,"none",2
+"ocean_model","ty_trans_submeso","ty_trans_submeso",    "ocean","all",.true.,"none",2
 #"ocean_model","tx_trans_rho","tx_trans_rho","ocean","all",.true.,"none",2
 #"ocean_model","ty_trans_rho","ty_trans_rho","ocean","all",.true.,"none",2
 #"ocean_model","ty_trans_rho_gm","ty_trans_rho_gm","ocean","all",.true.,"none",2
-#"ocean_model","temp_xflux_adv","temp_xflux_adv","ocean","all",.true.,"none",2
-#"ocean_model","temp_yflux_adv","temp_yflux_adv","ocean","all",.true.,"none",2
-#"ocean_model","diff_cbt_t","diff_cbt_t",    "ocean","all",.true.,"none",2
+"ocean_model","temp_xflux_adv","temp_xflux_adv","ocean","all",.true.,"none",2
+"ocean_model","temp_yflux_adv","temp_yflux_adv","ocean","all",.true.,"none",2
+"ocean_model","temp_xflux_gm","temp_xflux_gm","ocean","all",.true.,"none",2
+"ocean_model","temp_yflux_gm","temp_yflux_gm","ocean","all",.true.,"none",2
+"ocean_model","temp_xflux_submeso","temp_xflux_submeso","ocean","all",.true.,"none",2
+"ocean_model","temp_yflux_submeso","temp_yflux_submeso","ocean","all",.true.,"none",2
+"ocean_model","temp_xflux_ndiffuse","temp_xflux_ndiffuse","ocean","all",.true.,"none",2
+"ocean_model","temp_yflux_ndiffuse","temp_yflux_ndiffuse","ocean","all",.true.,"none",2
+"ocean_model","diff_cbt_t","diff_cbt_t",    "ocean","all",.true.,"none",2
 
 # Temperature-binned transports
 "ocean_model","tx_trans_nrho","tx_trans_nrho", "ocean_wmass","all",.true.,"none",2
