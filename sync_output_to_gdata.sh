@@ -5,11 +5,12 @@
 #PBS -l walltime=1:00:00,mem=4GB
 #PBS -P v45
 #PBS -N output_to_gdata
+#PBS -l storage=gdata/hh5+gdata/ik11+scratch/e14+gdata/ua8
 
 # Set this directory to something in /g/data3/hh5/tmp/cosima/
 # Make a unique path for your set of runs.
 # DOUBLE-CHECK IT IS UNIQUE SO YOU DON'T OVERWRITE EXISTING OUTPUT!
-GDATADIR=/ERROR/SET/GDATADIR/IN/sync_output_to_gdata.sh
+GDATADIR=/g/data/ik11/outputs/access-om2/1deg_jra55_ryf9091_gadi/
 
 mkdir -p ${GDATADIR}
 cd archive
