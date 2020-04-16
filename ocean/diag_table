@@ -96,50 +96,50 @@ ACCESS-OM2
 "ocean_model","mh_flux","mh_flux", "ocean_risavg","all","risavg","none",2
 
 # heat content snapshots and averages
-"ocean_model","temp_int_rhodz",'temp_int_rhodz", "ocean_month","all",.true.,"none",2
-"ocean_model","temp_int_rhodz",'temp_int_rhodz", "ocean_snap","all",.false.,"none",2
+"ocean_model","temp_int_rhodz","temp_int_rhodz", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_int_rhodz","temp_int_rhodz", "ocean_snap","all",.false.,"none",2
 
 # 3D for check
-"ocean_model","temp",'temp", "ocean_month","all",.true.,"none",2
-"ocean_model","dzt",'dzt", "ocean_month","all",.true.,"none",2
-"ocean_model","temp",'temp", "ocean_snap","all",.false.,"none",2
-"ocean_model","dzt",'dzt", "ocean_snap","all",.false.,"none",2
+"ocean_model","temp","temp", "ocean_month","all",.true.,"none",2
+"ocean_model","dzt","dzt", "ocean_month","all",.true.,"none",2
+"ocean_model","temp","temp", "ocean_snap","all",.false.,"none",2
+"ocean_model","dzt","dzt", "ocean_snap","all",.false.,"none",2
 
 # lateral heat fluxes
-"ocean_model","temp_xflux_adv_int_z",'temp_xflux_adv_int_z", "ocean_month","all",.true.,"none",2
-"ocean_model","temp_yflux_adv_int_z",'temp_yflux_adv_int_z", "ocean_month","all",.true.,"none",2
-"ocean_model","temp_xflux_submeso_int_z",'temp_xflux_submeso_int_z", "ocean_month","all",.true.,"none",2
-"ocean_model","temp_yflux_submeso_int_z",'temp_yflux_submeso_int_z", "ocean_month","all",.true.,"none",2
-"ocean_model","temp_xflux_gm_int_z",'temp_xflux_gm_int_z", "ocean_month","all",.true.,"none",2
-"ocean_model","temp_yflux_gm_int_z",'temp_yflux_gm_int_z", "ocean_month","all",.true.,"none",2
-"ocean_model","temp_xflux_ndiffuse_int_z",'temp_xflux_ndiffuse_int_z", "ocean_month","all",.true.,"none",2
-"ocean_model","temp_yflux_ndiffuse_int_z",'temp_yflux_ndiffuse_int_z", "ocean_month","all",.true.,"none",2
-"ocean_model","temp_sigma_diff_xflux_int_z",'temp_sigma_diff_xflux_int_z", "ocean_month","all",.true.,"none",2
-"ocean_model","temp_sigma_diff_yflux_int_z",'temp_sigma_diff_yflux_int_z", "ocean_month","all",.true.,"none",2
-# I'm missing the mixdownslope which is a source, not a flux (can go over multiple grid points).
+"ocean_model","temp_xflux_adv_int_z","temp_xflux_adv_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_yflux_adv_int_z","temp_yflux_adv_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_xflux_submeso_int_z","temp_xflux_submeso_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_yflux_submeso_int_z","temp_yflux_submeso_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_xflux_gm_int_z","temp_xflux_gm_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_yflux_gm_int_z","temp_yflux_gm_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_xflux_ndiffuse_int_z","temp_xflux_ndiffuse_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_yflux_ndiffuse_int_z","temp_yflux_ndiffuse_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_sigma_diff_xflux_int_z","temp_sigma_diff_xflux_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_sigma_diff_yflux_int_z","temp_sigma_diff_yflux_int_z", "ocean_month","all",.true.,"none",2
+# I"m missing the mixdownslope which is a source, not a flux (can go over multiple grid points).
 # Hence adding 3D tendency here:
-"ocean_model","mixdownslope_temp",'mixdownslope_temp", "ocean_month","all",.true.,"none",2
+"ocean_model","mixdownslope_temp","mixdownslope_temp", "ocean_month","all",.true.,"none",2
 
 # Also add eta_smooth source in 3D:
-"ocean_model","temp_eta_smooth",'temp_eta_smooth", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_eta_smooth","temp_eta_smooth", "ocean_month","all",.true.,"none",2
 
 # same with risavg
-"ocean_model","temp_xflux_adv_int_z",'temp_xflux_adv_int_z", "ocean_risavg","all","risavg","none",2
-"ocean_model","temp_yflux_adv_int_z",'temp_yflux_adv_int_z", "ocean_risavg","all","risavg","none",2
-"ocean_model","temp_xflux_submeso_int_z",'temp_xflux_submeso_int_z", "ocean_risavg","all","risavg","none",2
-"ocean_model","temp_yflux_submeso_int_z",'temp_yflux_submeso_int_z", "ocean_risavg","all","risavg","none",2
-"ocean_model","temp_xflux_gm_int_z",'temp_xflux_gm_int_z", "ocean_risavg","all","risavg","none",2
-"ocean_model","temp_yflux_gm_int_z",'temp_yflux_gm_int_z", "ocean_risavg","all","risavg","none",2
-"ocean_model","temp_xflux_ndiffuse_int_z",'temp_xflux_ndiffuse_int_z", "ocean_risavg","all","risavg","none",2
-"ocean_model","temp_yflux_ndiffuse_int_z",'temp_yflux_ndiffuse_int_z", "ocean_risavg","all","risavg","none",2
-"ocean_model","temp_sigma_diff_xflux_int_z",'temp_sigma_diff_xflux_int_z", "ocean_risavg","all","risavg","none",2
-"ocean_model","temp_sigma_diff_yflux_int_z",'temp_sigma_diff_yflux_int_z", "ocean_risavg","all","risavg","none",2
-# I'm missing the mixdownslope which is a source, not a flux (can go over multiple grid points).
+"ocean_model","temp_xflux_adv_int_z","temp_xflux_adv_int_z", "ocean_risavg","all","risavg","none",2
+"ocean_model","temp_yflux_adv_int_z","temp_yflux_adv_int_z", "ocean_risavg","all","risavg","none",2
+"ocean_model","temp_xflux_submeso_int_z","temp_xflux_submeso_int_z", "ocean_risavg","all","risavg","none",2
+"ocean_model","temp_yflux_submeso_int_z","temp_yflux_submeso_int_z", "ocean_risavg","all","risavg","none",2
+"ocean_model","temp_xflux_gm_int_z","temp_xflux_gm_int_z", "ocean_risavg","all","risavg","none",2
+"ocean_model","temp_yflux_gm_int_z","temp_yflux_gm_int_z", "ocean_risavg","all","risavg","none",2
+"ocean_model","temp_xflux_ndiffuse_int_z","temp_xflux_ndiffuse_int_z", "ocean_risavg","all","risavg","none",2
+"ocean_model","temp_yflux_ndiffuse_int_z","temp_yflux_ndiffuse_int_z", "ocean_risavg","all","risavg","none",2
+"ocean_model","temp_sigma_diff_xflux_int_z","temp_sigma_diff_xflux_int_z", "ocean_risavg","all","risavg","none",2
+"ocean_model","temp_sigma_diff_yflux_int_z","temp_sigma_diff_yflux_int_z", "ocean_risavg","all","risavg","none",2
+# I"m missing the mixdownslope which is a source, not a flux (can go over multiple grid points).
 # Hence adding 3D tendency here:
-"ocean_model","mixdownslope_temp",'mixdownslope_temp", "ocean_risavg","all","risavg","none",2
+"ocean_model","mixdownslope_temp","mixdownslope_temp", "ocean_risavg","all","risavg","none",2
 
 # Also add eta_smooth source in 3D:
-"ocean_model","temp_eta_smooth",'temp_eta_smooth", "ocean_risavg","all","risavg","none",2
+"ocean_model","temp_eta_smooth","temp_eta_smooth", "ocean_risavg","all","risavg","none",2
 
 # timeseries - 1D scalar variables
 "ocean_model","ke_tot","ke_tot", "ocean_scalar","all",.true.,"none",1
