@@ -9,6 +9,7 @@ ACCESS-OM2
 
 # output files
 "ocean_month",      1,  "months", 1, "days", "time",
+"ocean_snap",       1,  "months", 1, "days", "time",
 "ocean",            12,  "months", 1, "days", "time",
 "ocean_grid",      -1,  "months", 1, "days", "time",
 "ocean_scalar",     1,  "months", 1, "days", "time",
@@ -68,7 +69,6 @@ ACCESS-OM2
 "ocean_model","sfc_salt_flux_restore","sfc_salt_flux_restore","ocean_month","all",.true.,"none",2
 "ocean_model","sfc_salt_flux_ice","sfc_salt_flux_ice","ocean_month","all",.true.,"none",2
 "ocean_model","sfc_salt_flux_coupler","sfc_salt_flux_coupler","ocean_month","all",.true.,"none",2
-"ocean_model","net_sfc_heating","net_sfc_heating", "ocean_month","all",.true.,"none",2
 "ocean_model","tau_x","tau_x",                     "ocean_month","all",.true.,"none",2
 "ocean_model","tau_y","tau_y",                     "ocean_month","all",.true.,"none",2
 "ocean_model","bmf_u","bmf_u",                     "ocean_month","all",.true.,"none",2
@@ -76,7 +76,44 @@ ACCESS-OM2
 "ocean_model","tx_trans_int_z","tx_trans_int_z",   "ocean_month","all",.true.,"none",2
 "ocean_model","ty_trans_int_z","ty_trans_int_z",   "ocean_month","all",.true.,"none",2
 "ocean_model","pbot_t","pbot_t",                   "ocean_month","all",.true.,"none",2
- 
+
+# fields for vertically-integrated heat budget --------------
+# surface heat fluxes
+"ocean_model","frazil_3d_int_z","frazil_3d_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","net_sfc_heating","net_sfc_heating", "ocean_month","all",.true.,"none",2
+"ocean_model","sfc_hflux_coupler","sfc_hflux_coupler", "ocean_month","all",.true.,"none",2
+"ocean_model","sfc_hflux_pme","sfc_hflux_pme", "ocean_month","all",.true.,"none",2
+"ocean_model","sfc_hflux_from_runoff","sfc_hflux_from_runoff", "ocean_month","all",.true.,"none",2
+"ocean_model","mh_flux","mh_flux", "ocean_month","all",.true.,"none",2
+
+# heat content snapshots and averages
+"ocean_model","temp_int_rhodz",'temp_int_rhodz", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_int_rhodz",'temp_int_rhodz", "ocean_snap","all",.false.,"none",2
+
+# 3D for check
+"ocean_model","temp",'temp", "ocean_month","all",.true.,"none",2
+"ocean_model","dzt",'dzt", "ocean_month","all",.true.,"none",2
+"ocean_model","temp",'temp", "ocean_snap","all",.false.,"none",2
+"ocean_model","dzt",'dzt", "ocean_snap","all",.false.,"none",2
+
+# lateral heat fluxes
+"ocean_model","temp_xflux_adv_int_z",'temp_xflux_adv_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_yflux_adv_int_z",'temp_yflux_adv_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_xflux_submeso_int_z",'temp_xflux_submeso_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_yflux_submeso_int_z",'temp_yflux_submeso_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_xflux_gm_int_z",'temp_xflux_gm_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_yflux_gm_int_z",'temp_yflux_gm_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_xflux_ndiffuse_int_z",'temp_xflux_ndiffuse_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_yflux_ndiffuse_int_z",'temp_yflux_ndiffuse_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_sigma_diff_xflux_int_z",'temp_sigma_diff_xflux_int_z", "ocean_month","all",.true.,"none",2
+"ocean_model","temp_sigma_diff_yflux_int_z",'temp_sigma_diff_yflux_int_z", "ocean_month","all",.true.,"none",2
+# I'm missing the mixdownslope which is a source, not a flux (can go over multiple grid points).
+# Hence adding 3D tendency here:
+"ocean_model","mixdownslope_temp",'mixdownslope_temp", "ocean_month","all",.true.,"none",2
+
+# Also add eta_smooth source in 3D:
+"ocean_model","temp_eta_smooth",'temp_eta_smooth", "ocean_month","all",.true.,"none",2
+
 
 # timeseries - 1D scalar variables
 "ocean_model","ke_tot","ke_tot", "ocean_scalar","all",.true.,"none",1
