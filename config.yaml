@@ -4,7 +4,7 @@
 # project: w35
 queue: normal
 walltime: 4:00:00
-jobname: 1deg_jra55_ryf
+jobname: 1dryf_K135
 ncpus: 252
 mem: 500GB
 
@@ -28,8 +28,8 @@ submodels:
       model: mom
       exe: /g/data/ik11/inputs/access-om2/bin/fms_ACCESS-OM_97e3429_libaccessom2_1bb8904.x
       input:
-            - /g/data/ua8/MOM/initial_conditions/WOA/10_KDS75
-            - /g/data/ua8/MOM/grids/10/topog/KDS75
+            - /g/data/ua8/MOM/initial_conditions/WOA/10_KDS135
+            - /g/data/ua8/MOM/grids/10/topog/KDS135
             - /g/data/ik11/inputs/access-om2/input_rc/mom_1deg
       ncpus: 216
 
