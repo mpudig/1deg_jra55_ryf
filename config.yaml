@@ -27,7 +27,10 @@ submodels:
     - name: ocean
       model: mom
       exe: /g/data/ik11/inputs/access-om2/bin/fms_ACCESS-OM_97e3429_libaccessom2_1bb8904.x
-      input: /g/data/ik11/inputs/access-om2/input_rc/mom_1deg
+      input:
+            - /g/data/ua8/MOM/initial_conditions/WOA/10_KDS75
+            - /g/data/ua8/MOM/grids/10/topog/KDS75
+            - /g/data/ik11/inputs/access-om2/input_rc/mom_1deg
       ncpus: 216
 
     - name: ice
