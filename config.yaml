@@ -3,7 +3,7 @@
 # and change project code as appropriate
 # project: w35
 queue: normal
-walltime: 4:30:00
+walltime: 18:00:00
 jobname: K75_1dryf
 ncpus: 252
 mem: 500GB
@@ -26,7 +26,7 @@ submodels:
 
     - name: ocean
       model: mom
-      exe: /g/data/ik11/inputs/access-om2/bin/fms_ACCESS-OM_97e3429_libaccessom2_1bb8904.x
+      exe: /g/data/e14/rmh561/access-om2/bin/fms_ACCESS-OM_ce6567d_libaccessom2_1bb8904.x
       input:
             - /g/data/ua8/MOM/initial_conditions/WOA/10_KDS75
             - /g/data/ua8/MOM/grids/10/topog/KDS75
