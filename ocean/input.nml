@@ -249,7 +249,7 @@
     drhodz_mom4p1 = .true.
     drhodz_smooth_horz = .false.
     drhodz_smooth_vert = .false.
-    nphysics_util_zero_init = .true.
+    nphysics_util_zero_init = .false.
     rossby_radius_max = 100000.0
     rossby_radius_min = 15000.0
     tracer_mix_micom = .false.
