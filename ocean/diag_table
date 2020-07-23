@@ -15,6 +15,7 @@ ACCESS-OM2
 "ocean_grid",      -1,  "months", 1, "days", "time",
 "ocean_scalar",     1,  "months", 1, "days", "time",
 "ocean_heat",     12,  "months", 1, "days", "time",
+"ocean_snapshot",   1,  "months", 1, "days", "time",
 
 
 # Save ocean grid data once and for all
@@ -120,6 +121,12 @@ ACCESS-OM2
 
 # To close volume budget, also need P-E+R T-binned:
 "ocean_model","mass_pmepr_on_nrho","mass_pmepr_on_nrho","ocean_wmass","all",.true.,"none",1
+
+# Monthly snapshots for spectra
+"ocean_model","temp","temp", "ocean_snapshot","all",.false.,"none",1
+"ocean_model","u","u", "ocean_snapshot","all",.false.,"none",1
+"ocean_model","v","v", "ocean_snapshot","all",.false.,"none",1
+"ocean_model","wt","wt", "ocean_snapshot","all",.false.,"none",1
 
 # # # Eulerian heat budget diagnostics (for check)
 # "ocean_model","temp_tendency","temp_tendency", "ocean_heat","all",.true.,"none",1
