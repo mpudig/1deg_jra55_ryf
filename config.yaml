@@ -4,7 +4,7 @@
 # project: w35
 queue: normal
 walltime: 4:00:00
-jobname: 1deg_C1_3D
+jobname: 1deg_C4_VU
 ncpus: 252
 mem: 500GB
 
@@ -28,7 +28,7 @@ submodels:
       model: mom
       exe: /g/data4/ik11/inputs/access-om2/bin/fms_ACCESS-OM_97e3429_libaccessom2_1bb8904.x
       input:
-            - /g/data/e14/rmh561/access-om2/input/red3DSK/C1_3D
+            - /g/data/e14/rmh561/access-om2/input/red3DSK/C4_VU
             - /g/data4/ik11/inputs/access-om2/input_rc/mom_1deg
       ncpus: 216
 
