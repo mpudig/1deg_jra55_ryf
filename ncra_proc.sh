@@ -2,8 +2,8 @@
 
 module load nco
 
-NAME=C12_2D_20
-OUTP=010
+NAME=C5_3D
+OUTP=029
 
 echo "ncra ocean.nc"
 ncra archive/output${OUTP}/ocean/ocean.nc archive/processed/ocean.${NAME}.out${OUTP}.ncra.nc
@@ -13,7 +13,8 @@ echo "ncrcat ocean_scalar.nc"
 ncrcat archive/output*/ocean/ocean_scalar.nc archive/processed/ocean_scalar.${NAME}.out000-${OUTP}.ncrcat.nc
 echo "ncra -v mld_max -y max ocean_month.nc"
 ncra -v mld_max -y max archive/output${OUTP}/ocean/ocean_month.nc archive/processed/ocean_month.mld_max.${NAME}.out${OUTP}.ncra.nc
-
+echo "ncrcat -v ty_trans_rho ocean.ty_transrho.nc"
+ncrcat -v ty_trans_rho,ty_trans_rho_gm archive/output0*/ocean/ocean.nc archive/processed/ocean.ty_trans_rho.C5_3D.out000-029.ncrcat.nc
 
 
 # echo "ncdiff ocean.ncra.nc"
