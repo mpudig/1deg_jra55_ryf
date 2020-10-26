@@ -4,14 +4,13 @@
 #PBS -l ncpus=1
 #PBS -l mem=8GB
 #PBS -l wd
-#PBS -sosoftware=matlab_unsw
 #PBS -q express
 #PBS -M ryan.holmes@unsw.edu.au
 
 module load nco
 
 NAME=C5_3D
-OUTP=049
+OUTP=074
 
 echo "ncra ocean.nc"
 ncra archive/output${OUTP}/ocean/ocean.nc archive/processed/ocean.${NAME}.out${OUTP}.ncra.nc
