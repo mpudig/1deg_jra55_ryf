@@ -10,7 +10,7 @@
 module load nco
 
 NAME=C5_3D
-OUTP=074
+OUTP=084
 
 echo "ncra ocean.nc"
 ncra archive/output${OUTP}/ocean/ocean.nc archive/processed/ocean.${NAME}.out${OUTP}.ncra.nc
