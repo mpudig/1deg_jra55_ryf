@@ -2,7 +2,7 @@
 #PBS -N KrediP
 #PBS -l walltime=01:00:00
 #PBS -l ncpus=1
-#PBS -l mem=32GB
+#PBS -l mem=8GB
 #PBS -l wd
 #PBS -q express
 #PBS -M ryan.holmes@unsw.edu.au
@@ -10,7 +10,7 @@
 module load nco
 
 NAME=C6_2D_MLT
-OUTP=049
+OUTP=074
 
 echo "ncra ocean.nc"
 ncra archive/output${OUTP}/ocean/ocean.nc archive/processed/ocean.${NAME}.out${OUTP}.ncra.nc
