@@ -40,7 +40,7 @@ ACCESS-OM2
 "ocean_model","u","u",                  "ocean","all",.true.,"none",2
 "ocean_model","v","v",                  "ocean","all",.true.,"none",2
 "ocean_model","wt","wt",                "ocean","all",.true.,"none",2
-#"ocean_model","dzt","dzt",              "ocean","all",.true.,"none",2
+"ocean_model","dzt","dzt",              "ocean","all",.true.,"none",2
 "ocean_model","pot_rho_0","pot_rho_0",  "ocean","all",.true.,"none",2
 "ocean_model","pot_rho_2","pot_rho_2",  "ocean","all",.true.,"none",2
 #"ocean_model","tx_trans","tx_trans",    "ocean","all",.true.,"none",2
@@ -53,8 +53,8 @@ ACCESS-OM2
 #"ocean_model","temp_yflux_adv","temp_yflux_adv","ocean","all",.true.,"none",2
 #"ocean_model","diff_cbt_t","diff_cbt_t",    "ocean","all",.true.,"none",2
 
-"ocean_model","aredi_3d","aredi_3d",     "ocean","all",.true.,"none",2
-"ocean_model","agm","agm",         "ocean","all",.true.,"none",2
+#"ocean_model","aredi_3d","aredi_3d",     "ocean","all",.true.,"none",2
+#"ocean_model","agm","agm",         "ocean","all",.true.,"none",2
 
 # 2d fields - monthly output
 "ocean_model","sea_level","sea_level",             "ocean_month","all",.true.,"none",2
