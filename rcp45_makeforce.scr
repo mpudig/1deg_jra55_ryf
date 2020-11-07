@@ -7,5 +7,5 @@ OUT=/g/data/e14/rmh561/access-om2/input/RCP/
 # cp $INP/RYF.rlds.1990_1991.nc $OUT
 
 module load nco
-ncap2 -s "tas_10m = tas_10m + 1.5;" $OUT/RYF.t_10.1990_1991.nc $OUT/RYF.t_10.1990_1991_rcpwarm.nc
-ncap2 -s "rlds = rlds + 8.0;" $OUT/RYF.rlds.1990_1991.nc $OUT/RYF.rlds.1990_1991_rcpwarm.nc
+ncap2 -s "tas_10m = tas_10m - 1.5;" $OUT/RYF.t_10.1990_1991.nc $OUT/RYF.t_10.1990_1991_rcpcool.nc
+ncap2 -s "rlds = rlds - 8.0;" $OUT/RYF.rlds.1990_1991.nc $OUT/RYF.rlds.1990_1991_rcpcool.nc
