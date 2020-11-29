@@ -221,7 +221,7 @@
 /
 &ocean_nphysics_util_nml
     agm = 600.0
-    agm_closure = .true.
+    agm_closure = .false.
     agm_closure_baroclinic = .true.
     agm_closure_buoy_freq = 0.004
     agm_closure_eady_ave_mixed = .true.
@@ -244,7 +244,7 @@
     agm_smooth_space = .false.
     agm_smooth_time = .false.
     aredi = 600.0
-    aredi_equal_agm = .false.
+    aredi_equal_agm = .true.
     agm_read_restart = .true.
     drhodz_mom4p1 = .true.
     drhodz_smooth_horz = .false.
