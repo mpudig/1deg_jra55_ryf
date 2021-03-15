@@ -10,7 +10,7 @@
 
 queue: normal
 walltime: 3:00:00
-jobname: 1deg_RH_cont
+jobname: 1deg_RH
 mem: 1000GB
 
 # Model configuration
@@ -23,7 +23,7 @@ submodels:
       exe: /g/data/e14/rmh561/access-om2/bin/yatm_44e8821.exe
       input:
             - /g/data/ik11/inputs/access-om2/input_20201102/yatm_1deg
-            - /g/data/e14/rmh561/inputs/JRA-55/RYF/v1-4
+            - /g/data/e14/rmh561/access-om2/input/JRA-55/RYF/v1-4
             - /g/data/ik11/inputs/JRA-55/RYF/v1-4
       ncpus: 1
 
