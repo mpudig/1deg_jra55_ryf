@@ -1,0 +1,17 @@
+#!/bin/bash
+#PBS -N NYFcopy
+#PBS -l walltime=1:00:00
+#PBS -l ncpus=1
+#PBS -l mem=2GB
+#PBS -l wd
+#PBS -l storage=scratch/e14
+#PBS -q copyq
+#PBS -M ryan.holmes@unsw.edu.au
+
+module load nco
+
+for filename in archive/output000/ocean/*.nc; do
+     ncdiff $filename "../1deg_jra55_ryf/archive/output000/ocean/"$(basename "$filename" .nc)".nc" archive/output000/ocean/$(basename "$filename" .nc)"_diff.nc";
+done
+
+
