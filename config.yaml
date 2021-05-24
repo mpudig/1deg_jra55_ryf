@@ -10,7 +10,7 @@
 
 queue: normal
 walltime: 3:00:00
-jobname: 1d_ryf_cont
+jobname: 1d_ryf_WCWC
 mem: 1100GB
 
 # Model configuration
@@ -24,6 +24,7 @@ submodels:
       input:
             - /g/data/ik11/inputs/access-om2/input_20201102/yatm_1deg
             - /g/data/ik11/inputs/JRA-55/RYF/v1-4
+            - /g/data/e14/rmh561/access-om2/input/RCP/scaling/
       ncpus: 1
 
     - name: ocean
