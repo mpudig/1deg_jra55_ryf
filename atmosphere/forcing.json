@@ -16,6 +16,12 @@
           "dimension": "temporal",
           "value": "INPUT/RYF.rlds.1990_1991_scaling.nc",
           "calendar": "experiment"
+        },
+        {
+          "type": "offset",
+          "dimension": "spatial",
+          "value": "INPUT/RYF.rlds.1990_1991_scalingPAC.nc",
+          "calendar": "experiment"
         }
       ]
     },
@@ -49,6 +55,12 @@
           "type": "offset",
           "dimension": "temporal",
           "value": "INPUT/RYF.tas.1990_1991_scaling.nc",
+          "calendar": "experiment"
+        },
+        {
+          "type": "offset",
+          "dimension": "spatial",
+          "value": "INPUT/RYF.tas.1990_1991_scalingPAC.nc",
           "calendar": "experiment"
         }
       ]
