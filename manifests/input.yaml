@@ -69,8 +69,8 @@ work/atmosphere/INPUT/RYF.rlds.1990_1991.nc:
 work/atmosphere/INPUT/RYF.rlds.1990_1991_scaling.nc:
   fullpath: /g/data/e14/rmh561/access-om2/input/RCP/scaling/RYF.rlds.1990_1991_scaling.nc
   hashes:
-    binhash: 0324aa54deaf433a08911da80c7dab06
-    md5: 774e96cfac919d12345baefbaa746efe
+    binhash: 0e59b263ed6328feeb754ff04108df09
+    md5: 628abe64490c04d5c2526cb3082299bc
 work/atmosphere/INPUT/RYF.rsds.1990_1991.nc:
   fullpath: /g/data/ik11/inputs/JRA-55/RYF/v1-4/RYF.rsds.1990_1991.nc
   hashes:
@@ -84,7 +84,12 @@ work/atmosphere/INPUT/RYF.tas.1990_1991.nc:
 work/atmosphere/INPUT/RYF.tas.1990_1991_scaling.nc:
   fullpath: /g/data/e14/rmh561/access-om2/input/RCP/scaling/RYF.tas.1990_1991_scaling.nc
   hashes:
-    binhash: c608ecf8c28b554e9e1688ae480b1ba0
+    binhash: fd3085943065c23f0ff1420d86f92494
+    md5: 9d2900d50e3860f25903017dbc232785
+work/atmosphere/INPUT/RYF.tas.1990_1991_scaling_backup.nc:
+  fullpath: /g/data/e14/rmh561/access-om2/input/RCP/scaling/RYF.tas.1990_1991_scaling_backup.nc
+  hashes:
+    binhash: f6085c34eeea7155861d8ad918addc10
     md5: d75d7c77d92d24fd762dde4e70e5e3a0
 work/atmosphere/INPUT/RYF.uas.1990_1991.nc:
   fullpath: /g/data/ik11/inputs/JRA-55/RYF/v1-4/RYF.uas.1990_1991.nc
@@ -536,11 +541,6 @@ work/ocean/INPUT/ocean_mosaic.nc:
   hashes:
     binhash: 6aadd388078defe3f80df6f3de77b4bd
     md5: cb42e630ee31d3686156fcbdc2f9d07c
-work/ocean/INPUT/ocean_temp_salt.res.nc:
-  fullpath: /g/data/ik11/inputs/access-om2/input_20201102/mom_1deg/ocean_temp_salt.res.nc
-  hashes:
-    binhash: 1530c856cbbc9b5073bdf3e7beb72cd7
-    md5: c5f7e60b5427a4442f111adc65a2d067
 work/ocean/INPUT/ocean_vgrid.nc:
   fullpath: /g/data/ik11/inputs/access-om2/input_20201102/mom_1deg/ocean_vgrid.nc
   hashes:
