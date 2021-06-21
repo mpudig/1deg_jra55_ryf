@@ -66,16 +66,26 @@ work/atmosphere/INPUT/RYF.rlds.1990_1991.nc:
   hashes:
     binhash: 9512836673a68507bed403ecd859ba38
     md5: 0ea83e107ec883c3f39a12b60ff50d8e
-work/atmosphere/INPUT/RYF.rlds.1990_1991_scaling.nc:
-  fullpath: /g/data/e14/rmh561/access-om2/input/RCP/scaling/RYF.rlds.1990_1991_scaling.nc
+work/atmosphere/INPUT/RYF.rlds.1990_1991_abrupt_cool.nc:
+  fullpath: /scratch/e14/mp2135/access-om2/input/RYF.rlds.1990_1991_abrupt_cool.nc
   hashes:
-    binhash: 6cef77ea8d0253f5103f750c57038c52
+    binhash: d75fb09fab7f4412ae0dd5542ae37dab
+    md5: 5b65ec0b513e98f7737f8023f741d174
+work/atmosphere/INPUT/RYF.rlds.1990_1991_abrupt_warm.nc:
+  fullpath: /scratch/e14/mp2135/access-om2/input/RYF.rlds.1990_1991_abrupt_warm.nc
+  hashes:
+    binhash: 8632cc263d22c953df396c938b4734cb
+    md5: bcbf83ee09b6db2d6c21f739d234f81d
+work/atmosphere/INPUT/RYF.rlds.1990_1991_cwcw10.nc:
+  fullpath: /scratch/e14/mp2135/access-om2/input/RYF.rlds.1990_1991_cwcw10.nc
+  hashes:
+    binhash: 8088f08a98b7cb913e5a64ed48c8e5a2
+    md5: 3e983bdd2e4f66befa92f26b67cfd0ff
+work/atmosphere/INPUT/RYF.rlds.1990_1991_wcwc10.nc:
+  fullpath: /scratch/e14/mp2135/access-om2/input/RYF.rlds.1990_1991_wcwc10.nc
+  hashes:
+    binhash: 1ef2a95f936cd8025b11a4f9b6e88f2c
     md5: 0105988cdda1d8ed774c82a015763527
-work/atmosphere/INPUT/RYF.rlds.1990_1991_scalingPAC.nc:
-  fullpath: /g/data/e14/rmh561/access-om2/input/RCP/scaling/RYF.rlds.1990_1991_scalingPAC.nc
-  hashes:
-    binhash: 1f3da8b95c389526ffe75715f2f74aa8
-    md5: cbd8f72d36868ccc9ecf107a790b65dd
 work/atmosphere/INPUT/RYF.rsds.1990_1991.nc:
   fullpath: /g/data/ik11/inputs/JRA-55/RYF/v1-4/RYF.rsds.1990_1991.nc
   hashes:
@@ -86,21 +96,26 @@ work/atmosphere/INPUT/RYF.tas.1990_1991.nc:
   hashes:
     binhash: 8f3c6798cc92a1d0b6573eb44b2a4dd2
     md5: 06689885f4f2f726b95a2818ab78a20d
-work/atmosphere/INPUT/RYF.tas.1990_1991_scaling.nc:
-  fullpath: /g/data/e14/rmh561/access-om2/input/RCP/scaling/RYF.tas.1990_1991_scaling.nc
+work/atmosphere/INPUT/RYF.tas.1990_1991_abrupt_cool.nc:
+  fullpath: /scratch/e14/mp2135/access-om2/input/RYF.tas.1990_1991_abrupt_cool.nc
   hashes:
-    binhash: 33c3c93ee73c4dd17edd350880e815a5
+    binhash: 8aa9108f19563f28073422b3c7e01693
+    md5: 163da73a3541b5c691664cbe6d93ba31
+work/atmosphere/INPUT/RYF.tas.1990_1991_abrupt_warm.nc:
+  fullpath: /scratch/e14/mp2135/access-om2/input/RYF.tas.1990_1991_abrupt_warm.nc
+  hashes:
+    binhash: 6ec5e335c31bb7d44bf8e2972efea00d
+    md5: 67961be5ee0de6c114e9a6f35de75497
+work/atmosphere/INPUT/RYF.tas.1990_1991_cwcw10.nc:
+  fullpath: /scratch/e14/mp2135/access-om2/input/RYF.tas.1990_1991_cwcw10.nc
+  hashes:
+    binhash: aa4253366ef71311e9bb55d74e2e13bf
+    md5: 72129d28bdba985ad87d9e9652b7f734
+work/atmosphere/INPUT/RYF.tas.1990_1991_wcwc10.nc:
+  fullpath: /scratch/e14/mp2135/access-om2/input/RYF.tas.1990_1991_wcwc10.nc
+  hashes:
+    binhash: b219e772d1bbdee2ec531003cb0eb522
     md5: 0a33d7310cb16fa252f461c75cc0c8ec
-work/atmosphere/INPUT/RYF.tas.1990_1991_scalingPAC.nc:
-  fullpath: /g/data/e14/rmh561/access-om2/input/RCP/scaling/RYF.tas.1990_1991_scalingPAC.nc
-  hashes:
-    binhash: 35e9a3e107977bb86b236c2da44ef043
-    md5: 5fc1f315d8963b0a5e0c204b97e07b54
-work/atmosphere/INPUT/RYF.tas.1990_1991_scaling_backup.nc:
-  fullpath: /g/data/e14/rmh561/access-om2/input/RCP/scaling/RYF.tas.1990_1991_scaling_backup.nc
-  hashes:
-    binhash: f6085c34eeea7155861d8ad918addc10
-    md5: d75d7c77d92d24fd762dde4e70e5e3a0
 work/atmosphere/INPUT/RYF.uas.1990_1991.nc:
   fullpath: /g/data/ik11/inputs/JRA-55/RYF/v1-4/RYF.uas.1990_1991.nc
   hashes:
@@ -551,6 +566,11 @@ work/ocean/INPUT/ocean_mosaic.nc:
   hashes:
     binhash: 6aadd388078defe3f80df6f3de77b4bd
     md5: cb42e630ee31d3686156fcbdc2f9d07c
+work/ocean/INPUT/ocean_temp_salt.res.nc:
+  fullpath: /g/data/ik11/inputs/access-om2/input_20201102/mom_1deg/ocean_temp_salt.res.nc
+  hashes:
+    binhash: 1530c856cbbc9b5073bdf3e7beb72cd7
+    md5: c5f7e60b5427a4442f111adc65a2d067
 work/ocean/INPUT/ocean_vgrid.nc:
   fullpath: /g/data/ik11/inputs/access-om2/input_20201102/mom_1deg/ocean_vgrid.nc
   hashes:
