@@ -10,7 +10,7 @@
 
 queue: normal
 walltime: 5:00:00
-jobname: 1deg_jra55_ryf_wcwc
+jobname: 1deg_wcwc
 mem: 1000GB
 
 # Model configuration
@@ -24,7 +24,7 @@ submodels:
       input:
             - /g/data/ik11/inputs/access-om2/input_20201102/yatm_1deg
             - /g/data/ik11/inputs/JRA-55/RYF/v1-4
-            - /scratch/e14/mp2135/access-om2/input/
+            - /g/data/e14/mp2135/access-om2/input/
       ncpus: 1
 
     - name: ocean
