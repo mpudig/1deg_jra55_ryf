@@ -4,5 +4,5 @@ INP=/g/data/e14/mp2135/access-om2/input/JRA-55/RYF/v1-4/RCPwarm
 OUT=/g/data/e14/mp2135/access-om2/input/JRA-55/RYF/v1-4/RCPwarm
 
 module load nco
-ncap2 -s "tas = tas + 1.5;" $OUT/RYF.tas.1990_1991.nc $OUT/RYF.tas.1990_1991_rcpwarm.nc
-ncap2 -s "rlds = rlds + 8.0;" $OUT/RYF.rlds.1990_1991.nc $OUT/RYF.rlds.1990_1991_rcpwarm.nc
+ncap2 -s "tas = tas - 3.0;" $OUT/RYF.tas.1990_1991.nc $OUT/RYF.tas.1990_1991_rcpcool_x2.nc
+ncap2 -s "rlds = rlds - 16.0;" $OUT/RYF.rlds.1990_1991.nc $OUT/RYF.rlds.1990_1991_rcpcool_x2.nc
