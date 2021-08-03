@@ -7,7 +7,7 @@
     chk_o2i_fields    = .false.
     cst_ocn_albedo    = .false.
     fields_from_atm   = 'swfld_i', 'lwfld_i', 'rain_i', 'snow_i', 'press_i',
-                        'runof_i', 'tair_i', 'qair_i', 'uwnd_i', 'vwnd_i',
+                        'runof_i', 'tair_i', 'relh_i', 'uwnd_i', 'vwnd_i',
                         'licalvf_i'
     fields_from_ocn   = 'sst_i', 'sss_i', 'ssu_i', 'ssv_i', 'sslx_i', 'ssly_i',
                         'pfmice_i'
