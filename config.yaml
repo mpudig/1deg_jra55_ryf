@@ -24,7 +24,7 @@ submodels:
       input:
             - /g/data/ik11/inputs/access-om2/input_20201102/yatm_1deg
             - /g/data/ik11/inputs/JRA-55/RYF/v1-4
-            - /g/data/e14/mp2135/access-om2/input/
+            - /scratch/e14/mp2135/access-om2/input
       ncpus: 1
 
     - name: ocean
