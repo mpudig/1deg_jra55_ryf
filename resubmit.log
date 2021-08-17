@@ -146,3 +146,26 @@ Loading exe manifest: manifests/exe.yaml
 payu: Found modules in /opt/Modules/v4.3.0
 qsub -q normal -P e14 -l walltime=10800 -l ncpus=288 -l mem=1000GB -N 1deg_wcwc_step_ -l wd -j n -v PAYU_PATH=/g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.04/bin,PAYU_N_RUNS=5,MODULESHOME=/opt/Modules/v4.3.0,MODULES_CMD=/opt/Modules/v4.3.0/libexec/modulecmd.tcl,MODULEPATH=/g/data/hh5/public/modules:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles -W umask=027 -l storage=gdata/e14+gdata/hh5+gdata/ik11+scratch/e14 -- /g/data/hh5/public/apps/miniconda3/envs/analysis3-21.04/bin/python3.8 /g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.04/bin/payu-run
 
+Tue Aug 17 20:34:49 AEST 2021
+Error not found: Segmentation fault: address not mapped to object
+Error not found: Segmentation fault: invalid permissions for mapped object
+Error found: Transport retry count exceeded
+Resubmission counter: 1
+laboratory path:  /scratch/e14/mp2135/access-om2
+binary path:  /scratch/e14/mp2135/access-om2/bin
+input path:  /scratch/e14/mp2135/access-om2/input
+work path:  /scratch/e14/mp2135/access-om2/work
+archive path:  /scratch/e14/mp2135/access-om2/archive
+Moving log 1deg_wcwc_step_.o26949901
+Moving log 1deg_wcwc_step_.e26949901
+Removing work path /scratch/e14/mp2135/access-om2/work/1deg_jra55_ryf_wcwc_step_test
+Removing symlink /home/561/mp2135/access-om2/1deg_jra55_ryf_wcwc_step_test/work
+26950474.gadi-pbs
+payu: warning: Job request includes 47 unused CPUs.
+payu: warning: CPU request increased from 241 to 288
+Loading input manifest: manifests/input.yaml
+Loading restart manifest: manifests/restart.yaml
+Loading exe manifest: manifests/exe.yaml
+payu: Found modules in /opt/Modules/v4.3.0
+qsub -q normal -P e14 -l walltime=10800 -l ncpus=288 -l mem=1000GB -N 1deg_wcwc_step_ -l wd -j n -v PAYU_PATH=/g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.04/bin,PAYU_N_RUNS=5,MODULESHOME=/opt/Modules/v4.3.0,MODULES_CMD=/opt/Modules/v4.3.0/libexec/modulecmd.tcl,MODULEPATH=/g/data/hh5/public/modules:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles -W umask=027 -l storage=gdata/e14+gdata/hh5+gdata/ik11+scratch/e14 -- /g/data/hh5/public/apps/miniconda3/envs/analysis3-21.04/bin/python3.8 /g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.04/bin/payu-run
+
