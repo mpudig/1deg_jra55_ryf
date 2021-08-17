@@ -169,3 +169,9 @@ Loading exe manifest: manifests/exe.yaml
 payu: Found modules in /opt/Modules/v4.3.0
 qsub -q normal -P e14 -l walltime=10800 -l ncpus=288 -l mem=1000GB -N 1deg_wcwc_step_ -l wd -j n -v PAYU_PATH=/g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.04/bin,PAYU_N_RUNS=5,MODULESHOME=/opt/Modules/v4.3.0,MODULES_CMD=/opt/Modules/v4.3.0/libexec/modulecmd.tcl,MODULEPATH=/g/data/hh5/public/modules:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles -W umask=027 -l storage=gdata/e14+gdata/hh5+gdata/ik11+scratch/e14 -- /g/data/hh5/public/apps/miniconda3/envs/analysis3-21.04/bin/python3.8 /g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.04/bin/payu-run
 
+Tue Aug 17 20:35:34 AEST 2021
+Error not found: Segmentation fault: address not mapped to object
+Error not found: Segmentation fault: invalid permissions for mapped object
+Error not found: Transport retry count exceeded
+Error not found: atmosphere/input.nml
+Error not eligible for resubmission
