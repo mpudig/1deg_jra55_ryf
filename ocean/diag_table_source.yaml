@@ -145,7 +145,7 @@ diag_table:
             # diff_cbt_t:
             dzt:  # potentially calculable from other fields - https://github.com/COSIMA/access-om2/issues/203#issuecomment-635752170
             # pot_rho_0:
-            pot_rho_2:
+            # pot_rho_2:
             # pot_temp:
             salt:
             # temp_xflux_adv:
@@ -159,12 +159,41 @@ diag_table:
             # tx_trans:
             # ty_trans_gm:
             # ty_trans_nrho_submeso:
-            ty_trans_rho_gm:
-            ty_trans_rho:
+            # ty_trans_rho_gm:
+            # ty_trans_rho:
             # ty_trans_submeso:
             # ty_trans:
+            # u:
+            # v:
+            # vert_pv:
+            # vorticity_z:
+            # wt:
+    'yearly 3d fields':
+        defaults:  # these can be overridden for individual fields below
+            file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
+            output_freq: 12  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
+            output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
+        fields:
+            diff_cbt_t:
+            dzt:  # potentially calculable from other fields - https://github.com/COSIMA/access-om2/issues/203#issuecomment-635752170
+            pot_rho_2:
+            salt:
+            temp:
             u:
             v:
+            temp_tendency:
+            temp_advection:
+            temp_vdiffuse_sbc:
+            temp_vdiffuse_diff_cbt:
+            temp_nonlocal_KPP:
+            sfc_hflux_pme:
+            frazil_3d:
+            neutral_diffusion_temp:
+            neutral_gm_temp:
+            temp_vdiffuse_k33:
+            sw_heat:
+            ty_trans_rho_gm:
+            ty_trans_rho:
             # vert_pv:
             # vorticity_z:
             wt:
@@ -200,8 +229,8 @@ diag_table:
             # mh_flux:
             mld:
             net_sfc_heating:
-            pbot_t:
-            pme_net:
+            # pbot_t:
+            # pme_net:
             pme_river:
             # river:
             # runoff:
@@ -219,15 +248,15 @@ diag_table:
             swflx:
             tau_x:
             tau_y:
-            temp_int_rhodz:
-            temp_xflux_adv_int_z:
-            temp_xflux_gm_int_z:
-            temp_xflux_ndiffuse_int_z:
-            temp_xflux_submeso_int_z:
-            temp_yflux_adv_int_z:
-            temp_yflux_gm_int_z:
-            temp_yflux_ndiffuse_int_z:
-            temp_yflux_submeso_int_z:
+            # temp_int_rhodz:
+            # temp_xflux_adv_int_z:
+            # temp_xflux_gm_int_z:
+            # temp_xflux_ndiffuse_int_z:
+            # temp_xflux_submeso_int_z:
+            # temp_yflux_adv_int_z:
+            # temp_yflux_gm_int_z:
+            # temp_yflux_ndiffuse_int_z:
+            # temp_yflux_submeso_int_z:
             tx_trans_int_z:
             ty_trans_int_z:
             # wfiform:
