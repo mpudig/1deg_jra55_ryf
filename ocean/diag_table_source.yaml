@@ -147,7 +147,7 @@ diag_table:
             # pot_rho_0:
             # pot_rho_2:
             # pot_temp:
-            salt:
+            #salt:
             # temp_xflux_adv:
             # temp_yflux_adv:
             temp:
@@ -174,29 +174,29 @@ diag_table:
             output_freq: 12  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
         fields:
-            diff_cbt_t:
-            dzt:  # potentially calculable from other fields - https://github.com/COSIMA/access-om2/issues/203#issuecomment-635752170
-            pot_rho_2:
-            salt:
-            temp:
-            u:
-            v:
-            temp_tendency:
-            temp_advection:
-            temp_vdiffuse_sbc:
-            temp_vdiffuse_diff_cbt:
-            temp_nonlocal_KPP:
-            sfc_hflux_pme:
-            frazil_3d:
-            neutral_diffusion_temp:
-            neutral_gm_temp:
-            temp_vdiffuse_k33:
-            sw_heat:
-            ty_trans_rho_gm:
-            ty_trans_rho:
-            # vert_pv:
-            # vorticity_z:
-            wt:
+            #diff_cbt_t:
+            #dzt:  # potentially calculable from other fields - https://github.com/COSIMA/access-om2/issues/203#issuecomment-635752170
+            #pot_rho_2:
+            #salt:
+            #temp:
+            #u:
+            #v:
+            #temp_tendency:
+            #temp_advection:
+            #temp_vdiffuse_sbc:
+            #temp_vdiffuse_diff_cbt:
+            #temp_nonlocal_KPP:
+            #sfc_hflux_pme:
+            #frazil_3d:
+            #neutral_diffusion_temp:
+            #neutral_gm_temp:
+            #temp_vdiffuse_k33:
+            #sw_heat:
+            #ty_trans_rho_gm:
+            #ty_trans_rho:
+            #vert_pv:
+            #vorticity_z:
+            #wt:
     'monthly 3d squared fields':  # for calculating EKE etc
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
@@ -218,36 +218,36 @@ diag_table:
             # bmf_v:
             # ekman_we:
             # eta_nonbouss:
-            evap_heat:
+            # evap_heat:
             # evap:
-            fprec_melt_heat:
+            #fprec_melt_heat:
             # fprec:
             frazil_3d_int_z:
             # lprec:
-            lw_heat:
+            #lw_heat:
             # melt:
             # mh_flux:
             mld:
             net_sfc_heating:
             # pbot_t:
             # pme_net:
-            pme_river:
+            #pme_river:
             # river:
             # runoff:
-            sea_level_sq:
-            sea_level:
-            sens_heat:
-            sfc_hflux_coupler:
-            sfc_hflux_from_runoff:
-            sfc_hflux_pme:
+            #sea_level_sq:
+            #sea_level:
+            #sens_heat:
+            #sfc_hflux_coupler:
+            #sfc_hflux_from_runoff:
+            #sfc_hflux_pme:
             # sfc_salt_flux_coupler:
             # sfc_salt_flux_ice:
             # sfc_salt_flux_restore:
             # surface_pot_temp:
             # surface_salt:
-            swflx:
-            tau_x:
-            tau_y:
+            #swflx:
+            #tau_x:
+            #tau_y:
             # temp_int_rhodz:
             # temp_xflux_adv_int_z:
             # temp_xflux_gm_int_z:
@@ -257,8 +257,8 @@ diag_table:
             # temp_yflux_gm_int_z:
             # temp_yflux_ndiffuse_int_z:
             # temp_yflux_submeso_int_z:
-            tx_trans_int_z:
-            ty_trans_int_z:
+            #tx_trans_int_z:
+            #ty_trans_int_z:
             # wfiform:
             # wfimelt:
     'monthly 2d fields with different reduction methods':
