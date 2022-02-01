@@ -9,16 +9,7 @@
     {
       "filename": "INPUT/RYF.rlds.1990_1991.nc",
       "fieldname": "rlds",
-      "cname": "lwfld_ai",
-      "perturbations": [
-        {
-          "type": "offset",
-          "dimension": "temporal",
-          "value": "INPUT/RYF.rlds.1990_1991_sinusoid_x1_period3_test.nc",
-          "calendar": "experiment",
-          "comment": ""
-        }
-      ]
+      "cname": "lwfld_ai"
     },
     {
       "filename": "INPUT/RYF.prra.1990_1991.nc",
@@ -44,16 +35,7 @@
     {
       "filename": "INPUT/RYF.tas.1990_1991.nc",
       "fieldname": "tas",
-      "cname": "tair_ai",
-      "perturbations": [
-        {
-          "type": "offset",
-          "dimension": "temporal",
-          "value": "INPUT/RYF.tas.1990_1991_sinusoid_x1_period3_test.nc",
-          "calendar": "experiment",
-          "comment": ""
-        }
-      ]
+      "cname": "tair_ai"
     },
     {
       "filename": "INPUT/RYF.rhuss.1990_1991.nc",
