@@ -544,8 +544,8 @@
     hwf_diffusivity   = .false.
     hwf_min_diffusivity = 2e-06
     hwf_n0_2omega     = 20.0
-    j09_bgmax         = 0.0
-    j09_bgmin         = 0.0
+    j09_bgmax         = 1e-4
+    j09_bgmin         = 1e-4
     j09_diffusivity   = .true.
     j09_lat           = 20.0
     use_diff_cbt_table = .false.
